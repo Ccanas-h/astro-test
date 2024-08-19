@@ -1,0 +1,117 @@
+html {
+    background-color: #f1f5f9;
+    font-family: sans-serif;
+}
+
+/*
+  80ch significa que el ancho máximo del elemento será 80 caracteres largos.
+    La unidad ch se basa en el ancho del carácter "0" en la fuente usada, por lo que es útil para textos. 
+    Esto asegura que el contenido no se haga demasiado ancho en pantallas grandes, facilitando la lectura. 
+  */
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+}
+
+/* nav styles */
+
+.nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    background-color: #ff9776;
+    display: none;
+    margin: 0;
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #ff9776;
+}
+
+.expanded {
+    display: unset;
+}
+
+/* 
+Antigua Forma
+@media screen and (min-width: 300px) {
+@media screen and (min-width: 1000px) {
+@media screen and (640px <= width < 768px) { 
+
+Nueva forma
+@media screen and (width >= 300px) {
+@media screen and (width < 1000px) {
+@media screen and (min-width: 640px) and (max-width: 768px) { 
+
+*/
+
+/* @media screen and (min-width: 636px) { */
+@media screen and (width >=636px) {
+    .nav-links {
+        margin-left: 5em;
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+
+
+    .hamburger {
+        display: none;
+    }
+}
+
+
+/* Hamburgues Style */
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #ff9776;
+}
+
+
+/* Dark mode */
+
+html.dark {
+    background-color: #0d0950;
+    color: #fff;
+  }
+  
+  .dark .nav-links a {
+    color: #fff;
+  }
